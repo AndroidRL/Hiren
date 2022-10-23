@@ -5,6 +5,8 @@ import static ProMex.classs.Utils.Util.DEc;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -17,9 +19,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import ProMex.classs.Utils.Util;
+import ProMex.classs.Utils.apiii;
 import cz.msebera.android.httpclient.Header;
 
-public class SplashHelp {
+public class Splash {
 
     public static String extra_switch_1;
     public static String extra_switch_2;
@@ -32,11 +35,11 @@ public class SplashHelp {
 
 
     /*Splash*/
-    public static void splash_next(String packageName, String VersonCode, Context context, Intent intent) {
+    public static void next_activity(String packageName, String VersonCode, Context context, Intent intent) {
+
 
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
-        asyncHttpClient.addHeader(DEc(Util.pizzuhead), DEc(Util.pizzudians));
-        asyncHttpClient.get(DEc(Util.pizzuli) + packageName, new JsonHttpResponseHandler() {
+        asyncHttpClient.get(DEc(Util.skadjvbsadkjb) + packageName, new JsonHttpResponseHandler() {
             @Override
             public void onStart() {
                 super.onStart();
@@ -47,7 +50,7 @@ public class SplashHelp {
                 super.onSuccess(statusCode, headers, response);
                 try {
                     // google
-                    MyHelpers.setGoogleEnable(response.getString("enable_google_admob_id"));
+                    MyHelpers.setGoogleEnable(response.getString("enable_google_admob"));
                     if (MyHelpers.getGoogleEnable().equals("1")) {
                         //banner
                         MyHelpers.SetGoogleBanner(response.getString("google_admob_banner_id"));

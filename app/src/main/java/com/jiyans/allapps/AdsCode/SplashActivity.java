@@ -13,7 +13,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.appwood.mylibrarys.SplashHelp;
+import com.appwood.mylibrarys.Splash;
 import com.jiyans.allapps.MainActivity;
 import com.jiyans.allapps.R;
 
@@ -25,11 +25,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         FirebaseGetId();
+
     }
 
     private void FirebaseGetId() {
         if (isOnline()) {
-            SplashHelp.splash_next("Testing","1", this, new Intent(this, MainActivity.class));
+            Splash.next_activity("com.phoenixlabapp.videodownloader","1", this, new Intent(this, MainActivity.class));
             return;
         }
         Dialog dialog = new Dialog(SplashActivity.this);
