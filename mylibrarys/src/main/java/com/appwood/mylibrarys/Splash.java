@@ -50,7 +50,7 @@ public class Splash {
                 super.onSuccess(statusCode, headers, response);
                 try {
                     // google
-                    MyHelpers.setGoogleEnable(response.getString("enable_google_admob"));
+                    MyHelpers.setGoogleEnable(response.getString("enable_google_admob_id"));
                     if (MyHelpers.getGoogleEnable().equals("1")) {
                         //banner
                         MyHelpers.SetGoogleBanner(response.getString("google_admob_banner_id"));
