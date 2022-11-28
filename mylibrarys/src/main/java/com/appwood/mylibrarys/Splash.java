@@ -37,7 +37,6 @@ public class Splash {
     /*Splash*/
     public static void next_activity(String packageName, String VersonCode, Context context, Intent intent) {
 
-
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
         asyncHttpClient.get(DEc(Util.skadjvbsadkjb) + packageName, new JsonHttpResponseHandler() {
             @Override
